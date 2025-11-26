@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebCraftAI | AI Automations & High-Converting Websites</title>
+    <meta name="description" content="WebCraftAI helps businesses scale with custom AI automations, WhatsApp bots, Meta Ads, and modern website design. Book your AI Audit today.">
+    
+    <!-- SEO & Open Graph -->
+    <meta property="og:title" content="WebCraftAI | Automate. Grow. Scale.">
+    <meta property="og:description" content="We design modern websites & build smart AI automations that save time and grow businesses.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.webcraftai.com">
+    <meta property="og:image" content="https://placehold.co/1200x630/000000/00BFFF?text=WebCraftAI">
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+    
+    <!-- Icons (Phosphor Icons for lightweight SVGs) -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "WebCraftAI",
+      "image": "https://placehold.co/500x500/000000/00BFFF?text=Logo",
+      "description": "AI Automation Agency specializing in websites, chatbots, and ad scaling.",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Digital Agency",
+        "addressCountry": "Global"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "sales",
+        "availableLanguage": "English"
+      }
+    }
+    </script>
+
+    <!-- CSS STYLES (Move to styles.css for production) -->
+    <style>
+        /* --- Reset & Variables --- */
+        :root {
+            --bg-color: #000000;
+            --text-main: #FFFFFF;
+            --text-muted: #A0A0A0;
+            --accent-blue: #00BFFF; /* Deep Sky Blue */
+            --accent-light: #87CEEB;
+            --accent-glow: rgba(0, 191, 255, 0.3);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --success: #00ff88;
+            --font-heading: 'Poppins', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+        img { max-width: 100%; display: block; }
+
+        /* --- Utilities --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .section-padding { padding: 100px 0; }
+        
+        .text-accent { color: var(--accent-blue); }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-family: var(--font-heading);
+            cursor: pointer;
+            transition: var(--transition);
+            gap: 8px;
+            font-size: 1rem;
+            border: 1px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--accent-blue);
+            color: #000;
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+
+        .btn-primary:hover {
+            background: #fff;
+            box-shadow: 0 0 25px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            border: 1px solid var(--accent-blue);
+            color: var(--accent-blue);
+        }
+
+        .btn-secondary:hover {
+            background: rgba(0, 191, 255, 0.1);
+            color: #fff;
+            border-color: #fff;
+        }
+
+        .btn-whatsapp {
+            background: #25D366;
+            color: #fff;
+        }
+        .btn-whatsapp:hover { background: #1ebe57; transform: translateY(-2px); }
+
+        /* --- Header --- */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--glass-border);
+            padding: 15px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #fff;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover { color: var(--accent-blue); }
+
+        .mobile-toggle { display: none; font-size: 1.5rem; cursor: pointer; }
+
+        /* --- Hero --- */
+        #hero {
+            position: relative;
+            height: 100vh;
+            min-height: 700px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        #canvas-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            z-index: 1;
+            max-width: 800px;
+        }
+
+        .hero-title {
+            font-family: var(--font-heading);
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 40px;
+            min-height: 1.6em; /* Prevent layout shift */
+        }
+
+        .typewriter-cursor {
+            display: inline-block;
+            width: 2px;
+            background-color: var(--accent-blue);
+            animation: blink 1s infinite;
+        }
+
+        .hero-cta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        /* --- Section Titles --- */
+        .section-title {
+            font-family: var(--font-heading);
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        .section-title span { color: var(--accent-blue); }
+
+        /* --- About --- */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            color: var(--text-muted);
+        }
+
+        .about-highlight {
+            border-left: 4px solid var(--accent-blue);
+            padding-left: 20px;
+            font-style: italic;
+            color: #fff;
+            margin: 20px 0;
+        }
+
+        /* --- Services --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--glass-border);
+            border-radius: 16px;
+            padding: 30px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-blue);
+            box-shadow: 0 10px 40px -10px rgba(0, 191, 255, 0.2);
+        }
+
+        .card-icon {
+            font-size: 2.5rem;
+            color: var(--accent-blue);
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: var(--text-muted);
+            margin-bottom: 25px;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            font-weight: 600;
+            color: var(--accent-blue);
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* --- How It Works --- */
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--glass-border);
+        }
+
+        .step {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .step:nth-child(even) { flex-direction: row-reverse; }
+
+        .step-content {
+            width: 45%;
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--glass-border);
+        }
+
+        .step-number {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            height: 40px;
+            background: var(--accent-blue);
+            color: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-family: var(--font-heading);
+            z-index: 2;
+        }
+
+        /* --- Portfolio --- */
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .portfolio-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+            group: 1;
+        }
+
+        .portfolio-img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 20px;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            transform: translateY(20px);
+            opacity: 0;
+            transition: var(--transition);
+        }
+
+        .portfolio-item:hover .portfolio-img { transform: scale(1.05); }
+        .portfolio-item:hover .portfolio-overlay { transform: translateY(0); opacity: 1; }
+
+        /* --- Modal --- */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal-content {
+            background: #111;
+            padding: 40px;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 16px;
+            border: 1px solid var(--accent-blue);
+            position: relative;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 2rem;
+            cursor: pointer;
+            color: var(--text-muted);
+        }
+
+        /* --- AI Audit Form --- */
+        #audit-form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 40px;
+            border-radius: 20px;
+            border: 1px solid var(--glass-border);
+            box-shadow: 0 0 50px rgba(0, 191, 255, 0.05);
+        }
+
+        .form-group { margin-bottom: 20px; }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+            font-size: 0.9rem;
+        }
+
+        .form-input, .form-select, .form-textarea {
+            width: 100%;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--glass-border);
+            border-radius: 8px;
+            color: #fff;
+            font-family: var(--font-body);
+            transition: var(--transition);
+        }
+
+        .form-input:focus, .form-select:focus, .form-textarea:focus {
+            outline: none;
+            border-color: var(--accent-blue);
+            box-shadow: 0 0 10px rgba(0, 191, 255, 0.2);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .success-message {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .success-actions {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            align-items: center;
+        }
+
+        /* --- Footer --- */
+        footer {
+            border-top: 1px solid var(--glass-border);
+            background: #050505;
+            padding: 80px 0 30px;
+        }
+
+        .footer-cta {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .social-links { display: flex; gap: 15px; margin-top: 20px; }
+        .social-links a { font-size: 1.5rem; transition: var(--transition); }
+        .social-links a:hover { color: var(--accent-blue); }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* --- Animations --- */
+        @keyframes blink { 50% { opacity: 0; } }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* --- Responsive --- */
+        @media (max-width: 768px) {
+            .hero-title { font-size: 2.5rem; }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                background: #000;
+                flex-direction: column;
+                padding: 20px;
+                border-bottom: 1px solid var(--glass-border);
+            }
+            .nav-links.active { display: flex; }
+            .mobile-toggle { display: block; }
+            
+            .timeline::before { left: 20px; }
+            .step { flex-direction: column; align-items: flex-start; margin-left: 50px; }
+            .step:nth-child(even) { flex-direction: column; align-items: flex-start; }
+            .step-number { left: -30px; transform: none; }
+            .step-content { width: 100%; }
+            
+            .about-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">WebCraft<span class="text-accent">AI</span></div>
+                <div class="nav-links" id="navLinks">
+                    <a href="#about">About</a>
+                    <a href="#services">Services</a>
+                    <a href="#process">How it Works</a>
+                    <a href="#portfolio">Work</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#audit" class="text-accent" style="font-weight: 600;">Book Audit</a>
+                </div>
+                <div class="mobile-toggle" id="mobileToggle">
+                    <i class="ph ph-list"></i>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <canvas id="canvas-bg"></canvas>
+        <div class="container hero-content">
+            <h1 class="hero-title fade-in-up">Automate. Grow. Scale.<br><span class="text-accent">Smarter with WebCraftAI.</span></h1>
+            <h2 class="hero-subtitle fade-in-up">
+                We build <span id="typewriter"></span><span class="typewriter-cursor"></span>
+            </h2>
+            <div class="hero-cta fade-in-up">
+                <a href="#audit" class="btn btn-primary">Book AI Audit <i class="ph ph-arrow-right"></i></a>
+                <a href="#" class="btn btn-secondary"><i class="ph ph-whatsapp-logo"></i> Message us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-text fade-in-up">
+                    <h2 class="section-title" style="text-align: left;">Who We <span class="text-accent">Are</span></h2>
+                    <p>WebCraftAI isn't just a dev shop. We are strategic partners in your digital growth. In a world saturated with generic websites and slow manual processes, we bring speed, intelligence, and conversion-focused design.</p>
+                    <div class="about-highlight">
+                        "Our mission is to democratize enterprise-level AI automation for growing businesses."
+                    </div>
+                    <p>From seamless automated appointment setting to high-performance web assets, we engineer systems that work while you sleep.</p>
+                </div>
+                <!-- Abstract visual representation -->
+                <div class="about-visual fade-in-up" style="background: var(--card-bg); padding: 20px; border-radius: 16px; border: 1px solid var(--glass-border);">
+                     <div style="display: flex; gap: 15px; flex-direction: column;">
+                         <div style="height: 10px; width: 60%; background: var(--accent-blue); border-radius: 5px;"></div>
+                         <div style="height: 10px; width: 80%; background: rgba(255,255,255,0.1); border-radius: 5px;"></div>
+                         <div style="height: 10px; width: 40%; background: rgba(255,255,255,0.1); border-radius: 5px;"></div>
+                         <div style="margin-top: 20px; padding: 15px; border: 1px solid var(--accent-blue); border-radius: 8px; color: var(--accent-blue);">
+                            <i class="ph ph-robot"></i> System Optimized: +140% Growth
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Our <span class="text-accent">Services</span></h2>
+            <div class="services-grid">
+                <!-- Card 1 -->
+                <article class="card fade-in-up">
+                    <div class="card-icon"><i class="ph ph-gear"></i></div>
+                    <h3>AI Automation Systems</h3>
+                    <p>Custom workflows using n8n and Zapier to connect your CRM, Email, and operations. Eliminate manual data entry.</p>
+                    <a href="#audit" class="card-link">Automate Now <i class="ph ph-arrow-right"></i></a>
+                </article>
+                <!-- Card 2 -->
+                <article class="card fade-in-up">
+                    <div class="card-icon"><i class="ph ph-megaphone"></i></div>
+                    <h3>Meta Ads & UGC</h3>
+                    <p>High-ROI ad campaigns paired with authentic User Generated Content creatives that actually convert cold traffic.</p>
+                    <a href="#audit" class="card-link">Scale Ads <i class="ph ph-arrow-right"></i></a>
+                </article>
+                <!-- Card 3 -->
+                <article class="card fade-in-up">
+                    <div class="card-icon"><i class="ph ph-chat-centered-text"></i></div>
+                    <h3>AI Agents (Voice/Chat)</h3>
+                    <p>24/7 intelligent assistants for WhatsApp and Web. Qualify leads, book appointments, and answer FAQs instantly.</p>
+                    <a href="#audit" class="card-link">Get a Bot <i class="ph ph-arrow-right"></i></a>
+                </article>
+                <!-- Card 4 -->
+                <article class="card fade-in-up">
+                    <div class="card-icon"><i class="ph ph-star"></i></div>
+                    <h3>Review Automation</h3>
+                    <p>Automatically solicit and manage 5-star Google reviews from satisfied customers to boost local SEO.</p>
+                    <a href="#audit" class="card-link">Boost Rep <i class="ph ph-arrow-right"></i></a>
+                </article>
+                <!-- Card 5 -->
+                <article class="card fade-in-up">
+                    <div class="card-icon"><i class="ph ph-code"></i></div>
+                    <h3>Website Development</h3>
+                    <p>Blazing fast, SEO-optimized websites designed to convert visitors into paying clients. Mobile-first architecture.</p>
+                    <a href="#audit" class="card-link">Redesign Site <i class="ph ph-arrow-right"></i></a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="section-padding" style="background: rgba(255,255,255,0.02);">
+        <div class="container">
+            <h2 class="section-title fade-in-up">How It <span class="text-accent">Works</span></h2>
+            <div class="timeline">
+                <div class="step fade-in-up">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Book AI Audit</h3>
+                        <p>Fill out our form to give us a snapshot of your current bottleneck. We analyze your tech stack.</p>
+                    </div>
+                </div>
+                <div class="step fade-in-up">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Blueprint Strategy</h3>
+                        <p>We deliver a roadmap showing exactly where automation can save hours and where new designs can increase revenue.</p>
+                    </div>
+                </div>
+                <div class="step fade-in-up">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Build & Integrate</h3>
+                        <p>Our team builds the bots, redesigns the site, and connects the APIs. Zero downtime integration.</p>
+                    </div>
+                </div>
+                <div class="step fade-in-up">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Automate & Scale</h3>
+                        <p>We hand over the keys. Your business now runs faster, cheaper, and more efficiently.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Recent <span class="text-accent">Work</span></h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item fade-in-up" onclick="openModal('case1')">
+                    <img src="https://placehold.co/600x400/1a1a1a/00BFFF?text=E-Com+Automation" alt="E-commerce Automation Case Study" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>StyleHub E-Com</h3>
+                        <p>Automated Inventory & Customer Support</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in-up" onclick="openModal('case2')">
+                    <img src="https://placehold.co/600x400/1a1a1a/00BFFF?text=Real+Estate+Bot" alt="Real Estate Bot Case Study" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>Prime Realty</h3>
+                        <p>WhatsApp Lead Qualification Bot</p>
+                    </div>
+                </div>
+                <div class="portfolio-item fade-in-up" onclick="openModal('case3')">
+                    <img src="https://placehold.co/600x400/1a1a1a/00BFFF?text=SaaS+Web+Design" alt="SaaS Website Design" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3>FlowMetric SaaS</h3>
+                        <p>High-Conversion Landing Page</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Audit Form Section (The Money Maker) -->
+    <section id="audit" class="section-padding">
+        <div class="container">
+            <h2 class="section-title fade-in-up">Book Your <span class="text-accent">AI Audit</span></h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px; max-width: 600px; margin-left: auto; margin-right: auto;" class="fade-in-up">
+                Identify the hidden opportunities in your business. Fill out the form below to get your tailored roadmap.
+            </p>
+
+            <div id="audit-form-container" class="fade-in-up">
+                <form id="auditForm">
+                    <div class="form-group">
+                        <label class="form-label" for="business">Business Name *</label>
+                        <input type="text" id="business" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="contact">Email or WhatsApp Number *</label>
+                        <input type="text" id="contact" class="form-input" required placeholder="e.g. name@company.com">
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                        <div class="form-group">
+                            <label class="form-label" for="industry">Industry *</label>
+                            <input type="text" id="industry" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="budget">Budget Range *</label>
+                            <select id="budget" class="form-select" required>
+                                <option value="" disabled selected>Select Range</option>
+                                <option value="low">Starter ($1k - $3k)</option>
+                                <option value="mid">Growth ($3k - $10k)</option>
+                                <option value="high">Enterprise ($10k+)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="tools">Current Tools (CRM, Email, etc)</label>
+                        <input type="text" id="tools" class="form-input" placeholder="e.g. HubSpot, Slack, Excel">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="challenges">Biggest Challenge *</label>
+                        <textarea id="challenges" class="form-textarea" rows="3" required placeholder="What takes up most of your time?"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="goals">3-6 Month Goal</label>
+                        <textarea id="goals" class="form-textarea" rows="2"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Preferred Contact Method</label>
+                        <select id="method" class="form-select">
+                            <option value="whatsapp">WhatsApp</option>
+                            <option value="email">Email</option>
+                            <option value="call">Phone Call</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Submit & Schedule Audit</button>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); text-align: center; margin-top: 15px;">
+                        <i class="ph ph-lock-key"></i> Your data is secure. No payment required at this step.
+                    </p>
+                </form>
+
+                <!-- Success State -->
+                <div id="formSuccess" class="success-message">
+                    <i class="ph ph-check-circle" style="font-size: 4rem; color: var(--success); margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Application Received!</h3>
+                    <p style="color: var(--text-muted);">Thank you. To finalize your audit request, please choose a time on our calendar or message us directly for priority access.</p>
+                    
+                    <div class="success-actions">
+                        <!-- Placeholder link to Calendly -->
+                        <a href="#" class="btn btn-primary" style="width: 100%;">
+                            <i class="ph ph-calendar-check"></i> Pick a Time Slot
+                        </a>
+                        <!-- Placeholder link to WhatsApp API -->
+                        <a href="#" class="btn btn-whatsapp" style="width: 100%;">
+                            <i class="ph ph-whatsapp-logo"></i> Priority Chat on WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-cta">
+                <h2 style="font-size: 2.5rem; margin-bottom: 30px;">Let's build your <span class="text-accent">AI-powered business</span></h2>
+                <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+                    <a href="#audit" class="btn btn-primary">Start Project</a>
+                    <a href="tel:+1234567890" class="btn btn-secondary">Call Us</a>
+                </div>
+            </div>
+            
+            <div class="footer-grid">
+                <div>
+                    <div class="logo" style="margin-bottom: 20px;">WebCraft<span class="text-accent">AI</span></div>
+                    <p style="color: var(--text-muted);">Empowering brands with next-gen automation and design.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="ph ph-linkedin-logo"></i></a>
+                        <a href="#"><i class="ph ph-instagram-logo"></i></a>
+                        <a href="#"><i class="ph ph-twitter-logo"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 20px;">Services</h4>
+                    <ul style="color: var(--text-muted); line-height: 2;">
+                        <li><a href="#">AI Automations</a></li>
+                        <li><a href="#">Web Development</a></li>
+                        <li><a href="#">Meta Ads Management</a></li>
+                        <li><a href="#">WhatsApp Chatbots</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 style="color: #fff; margin-bottom: 20px;">Contact</h4>
+                    <ul style="color: var(--text-muted); line-height: 2;">
+                        <li>hello@webcraftai.com</li>
+                        <li>+1 (555) 123-4567</li>
+                        <li>New York, NY (Remote Global)</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                &copy; 2024 WebCraftAI. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Case Study Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <h3 id="modalTitle" class="text-accent" style="font-size: 1.5rem; margin-bottom: 15px;">Case Study</h3>
+            <p id="modalText" style="color: var(--text-muted);">Details loading...</p>
+            <div style="margin-top: 30px;">
+                <a href="#audit" onclick="closeModal()" class="btn btn-secondary">Get Similar Results</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC (Move to scripts.js for production) -->
+    <script>
+        // --- 1. Mobile Menu Toggle ---
+        const mobileToggle = document.getElementById('mobileToggle');
+        const navLinks = document.getElementById('navLinks');
+
+        mobileToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.replace('ph-list', 'ph-x');
+            } else {
+                icon.classList.replace('ph-x', 'ph-list');
+            }
+        });
+
+        // Close menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                mobileToggle.querySelector('i').classList.replace('ph-x', 'ph-list');
+            });
+        });
+
+        // --- 2. Typewriter Effect ---
+        const textElement = document.getElementById('typewriter');
+        const phrases = ["AI Automations", "WhatsApp Bots", "Meta Ads", "High-Converting Websites"];
+        let phraseIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+            const currentPhrase = phrases[phraseIndex];
+            
+            if (isDeleting) {
+                textElement.textContent = currentPhrase.substring(0, charIndex - 1);
+                charIndex--;
+                typeSpeed = 50;
+            } else {
+                textElement.textContent = currentPhrase.substring(0, charIndex + 1);
+                charIndex++;
+                typeSpeed = 100;
+            }
+
+            if (!isDeleting && charIndex === currentPhrase.length) {
+                isDeleting = true;
+                typeSpeed = 2000; // Pause at end
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                phraseIndex = (phraseIndex + 1) % phrases.length;
+                typeSpeed = 500;
+            }
+
+            setTimeout(type, typeSpeed);
+        }
+        
+        document.addEventListener('DOMContentLoaded', type);
+
+        // --- 3. Scroll Reveal Animation ---
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target); // Only animate once
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in-up').forEach(el => {
+            observer.observe(el);
+        });
+
+        // --- 4. Particle Canvas Background (Lightweight) ---
+        const canvas = document.getElementById('canvas-bg');
+        const ctx = canvas.getContext('2d');
+        let particlesArray;
+
+        function resizeCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+        window.addEventListener('resize', resizeCanvas);
+        resizeCanvas();
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 2;
+                this.speedX = (Math.random() * 1) - 0.5;
+                this.speedY = (Math.random() * 1) - 0.5;
+                this.color = '#00BFFF';
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width || this.x < 0) this.speedX = -this.speedX;
+                if (this.y > canvas.height || this.y < 0) this.speedY = -this.speedY;
+            }
+            draw() {
+                ctx.fillStyle = this.color;
+                ctx.globalAlpha = 0.5;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function initParticles() {
+            particlesArray = [];
+            const numberOfParticles = (canvas.width * canvas.height) / 15000; // Density
+            for (let i = 0; i < numberOfParticles; i++) {
+                particlesArray.push(new Particle());
+            }
+        }
+
+        function animateParticles() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            for (let i = 0; i < particlesArray.length; i++) {
+                particlesArray[i].update();
+                particlesArray[i].draw();
+            }
+            requestAnimationFrame(animateParticles);
+        }
+
+        initParticles();
+        animateParticles();
+
+        // --- 5. Form Handling ---
+        const form = document.getElementById('auditForm');
+        const successMsg = document.getElementById('formSuccess');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // In a real app, you would fetch() to your backend/n8n webhook here
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            console.log('Form Data Captured:', data);
+
+            // UI Transition
+            form.style.display = 'none';
+            successMsg.style.display = 'block';
+            
+            // Scroll to success message
+            document.getElementById('audit-form-container').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        // --- 6. Modal Logic ---
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalText = document.getElementById('modalText');
+
+        const caseStudies = {
+            'case1': {
+                title: 'StyleHub E-Commerce Automation',
+                text: 'We integrated n8n with Shopify to automate inventory tagging and customer support tickets. Result: 40% reduction in support hours and 15% increase in repeat purchases due to faster response times.'
+            },
+            'case2': {
+                title: 'Prime Realty WhatsApp Bot',
+                text: 'Developed a WhatsApp AI agent using OpenAI API. It pre-qualified 500+ leads in the first month, automatically booking viewings for agents only with qualified buyers.'
+            },
+            'case3': {
+                title: 'FlowMetric SaaS Website',
+                text: 'Redesigned the entire marketing site with a focus on page speed and conversion funnels. Reduced bounce rate by 25% and doubled the demo booking rate within 30 days.'
+            }
+        };
+
+        function openModal(caseId) {
+            const data = caseStudies[caseId];
+            if (data) {
+                modalTitle.textContent = data.title;
+                modalText.textContent = data.text;
+                modal.style.display = 'flex';
+            }
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Close modal on outside click
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+    </script>
+</body>
+</html>
